@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CompiledMemories | MCA 2024–26</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.9/scrollreveal.min.js"></script>
+    <style>
+        body {
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .fade-in {
+            animation: fadeIn ease 2s;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="text-white font-sans">
+    <div class="min-h-screen flex flex-col items-center justify-center px-4 py-10">
+        <h1 class="text-5xl font-bold text-center mb-4" id="main-title">
+            <span id="typed-text"></span>
+        </h1>
+        <p class="text-lg text-gray-300 text-center mb-8 max-w-xl" id="intro-text">
+            Welcome to <strong>CompiledMemories</strong> — a digital archive of unforgettable moments from <strong>MCA
+                Batch 2024–26</strong>, School of Computer Sciences,KBCNMU Jalgaon. Crafted with love, logic, and
+            legacy.
+        </p>
+
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 w-full max-w-6xl px-4" id="gallery">
+            <a href="https://drive.google.com/drive/folders/14cogfr2xhuWqPOwHBB-vX8y5A_Vpgfz6?usp=drive_link"
+                target="_blank"
+                class="glass hover:bg-opacity-30 transition-all rounded-2xl p-6 shadow-xl transform hover:scale-105 duration-300">
+                <h2 class="text-2xl font-semibold mb-2">🎉 Fresher's Day</h2>
+                <p class="text-gray-300 text-sm">The beginning of our MCA journey — laughter, friends, and fresh vibes.
+                </p>
+            </a>
+            <a href="https://drive.google.com/drive/folders/14cogfr2xhuWqPOwHBB-vX8y5A_Vpgfz6?usp=drive_link"
+                target="_blank"
+                class="glass hover:bg-opacity-30 transition-all rounded-2xl p-6 shadow-xl transform hover:scale-105 duration-300">
+                <h2 class="text-2xl font-semibold mb-2">💻 Tech Fest 2025</h2>
+                <p class="text-gray-300 text-sm">Innovation, code, and celebration of ideas in motion.</p>
+            </a>
+            <a href="https://drive.google.com/drive/folders/14cogfr2xhuWqPOwHBB-vX8y5A_Vpgfz6?usp=drive_link"
+                target="_blank"
+                class="glass hover:bg-opacity-30 transition-all rounded-2xl p-6 shadow-xl transform hover:scale-105 duration-300">
+                <h2 class="text-2xl font-semibold mb-2">🏖️ Industrial Visit</h2>
+                <p class="text-gray-300 text-sm">Where learning met real-world experiences beyond the classroom.</p>
+            </a>
+        </div>
+
+        <div class="mt-16 text-center" id="footer">
+            <p class="text-gray-400">Developed by <a href=\"https://yourlink.com\" class=\"underline
+                    hover:text-white\">Vishal Sonone</a> & Rohit Mahale — MCA Student, School of Computer Science,
+                KBCNMU</p>
+            <p class="text-xs mt-2 text-gray-500">Coded in memories, compiled in hearts.| MCA 2024–26</p>
+        </div>
+    </div>
+
+    <script>
+        const options = {
+            strings: ["CompiledMemories", "Our MCA Story", "Logic to Legacy"],
+            typeSpeed: 60,
+            backSpeed: 40,
+            loop: true
+        };
+        const typed = new Typed("#typed-text", options);
+
+        ScrollReveal().reveal('#main-title', { delay: 100, origin: 'top', distance: '50px', duration: 1000 });
+        ScrollReveal().reveal('#intro-text', { delay: 300, origin: 'bottom', distance: '30px', duration: 1000 });
+        ScrollReveal().reveal('#gallery a', { interval: 200, origin: 'bottom', distance: '30px', duration: 800 });
+        ScrollReveal().reveal('#footer', { delay: 500, origin: 'top', distance: '20px', duration: 1000 });
+    </script>
+</body>
+
+</html>
